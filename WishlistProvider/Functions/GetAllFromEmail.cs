@@ -26,7 +26,7 @@ namespace WishlistProvider.Functions
         }
 
         [Function("GetAllFromEmail")]
-        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get",Route ="wishlistprovider")] HttpRequest req)
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
         {
             try
             {
