@@ -14,7 +14,7 @@ var host = new HostBuilder()
         services.ConfigureFunctionsApplicationInsights();
         services.AddDbContext<DataContext>(x =>
         {
-            x.UseSqlServer(context.Configuration.GetConnectionString("SqlServer"));
+            x.UseSqlServer(Environment.GetEnvironmentVariable("SqlServer"));
         });
 
         services.AddScoped<IAddToWishlistService, AddToWishlistService>();
