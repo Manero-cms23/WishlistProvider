@@ -16,7 +16,7 @@ public class AddToWishlist(ILogger<AddToWishlist> logger, IAddToWishlistService 
     private readonly IAddToWishlistService _addToWishlistService = addToWishlistService;
 
     [Function("AddToWishlist")]
-    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post",Route ="wishlistprovider")] HttpRequest req)
     {
         try
         {
