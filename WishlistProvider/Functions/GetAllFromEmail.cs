@@ -71,7 +71,5 @@ namespace WishlistProvider.Functions
             return null!;
         }
 
-
-
     }
 }
